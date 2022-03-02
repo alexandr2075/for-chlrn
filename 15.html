@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <style>
+      canvas {
+        display: block;
+        margin: 100px auto;
+      }
+    </style>
+    <script>
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+
+      ctx.strokeRect(10, 10, 380, 380);
+      ctx.fillRect(15, 15, 370, 370);
+      for (var i = 0; i < 5; i += 2) {
+        for (var j = 0; j < 5; j += 2) {
+          ctx.clearRect(25 + i * 70, 25 + j * 70, 70, 70);
+          ctx.clearRect(25 + (i + 1) * 70, 25 + (j + 1) * 70, 70, 70);
+        }
+      }
+    </script>
+  </body>
+</html>
